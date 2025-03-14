@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'weather_db',  # Your MySQL database
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': '127.0.0.1',  # Keep localhost
+        'HOST': 'mysql-weather-container',  # Keep localhost
         'PORT': '3307',  # Change from 3037 to 3307
     }
 }
