@@ -1,0 +1,33 @@
+weather_project/
+│── docker-compose.yml         # Docker Compose file (MySQL container)
+│── Dockerfile                 # Dockerfile for Python environment
+│── .env                       # Environment variables (API keys, DB credentials)
+│── requirements.txt           # Required Python libraries
+│
+├── backend/                   # Backend Python scripts
+│   ├── fetch_weather.py       # Fetch weather data from API
+│   ├── store_weather.py       # Store data into MySQL
+│   ├── config.py              # Configuration file for credentials
+│
+├── database/                  # MySQL setup files
+│   ├── init.sql               # SQL script to create DB & table
+│
+├── django_app/                # Django application for frontend
+│   ├── manage.py              # Django project entry point
+│   ├── db.sqlite3             # Django local database (optional)
+│   ├── weather_dashboard/     # Main Django app
+│   │   ├── __init__.py
+│   │   ├── settings.py        # Django settings
+│   │   ├── urls.py            # URL routing
+│   │   ├── wsgi.py
+│   │   ├── asgi.py
+│   │   ├── views.py           # Views to display data
+│   │   ├── models.py          # Django models (connect to MySQL)
+│   │   ├── admin.py           # Django admin panel
+│   │   ├── templates/         # HTML templates for UI
+│   │   ├── static/            # CSS, JavaScript files
+│   │   ├── migrations/        # Database migrations
+│
+└── scripts/                   # Utility scripts
+    ├── run_fetch.sh           # Shell script to fetch weather data automatically
+    ├── cronjob.txt            # Cron job to automate weather data fetching
