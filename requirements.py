@@ -1,3 +1,4 @@
 requests
 django
 mysqlclient
+gunicorn
